@@ -13,7 +13,7 @@ public class WeatherService {
     private static final String API_KEY = "466e7759dbdba6980a7ae11a20f63ae1"; 
     private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=metric";
 
-    public WeatherModel fetchWeather(String city) {
+    public WeatherData fetchWeather(String city) {
         try {
             String url = String.format(BASE_URL, city, API_KEY);
 
@@ -28,7 +28,7 @@ public class WeatherService {
 
             JSONObject json = new JSONObject(response.body());
 
-            WeatherModel model = new WeatherModel();
+            WeatherData model = new WeatherData();
             model.setLastCity(city);
             model.setLastTemperature(json.getJSONObject("main").getDouble("temp"));
             model.setLastDescription(json.getJSONArray("weather")

@@ -1,14 +1,14 @@
 package com.example.weather;
 
-import dev.jminiapp.Application;
-import dev.jminiapp.persistence.DataRepository;
-import dev.jminiapp.persistence.JsonDataRepository;
+import com.jminiapp.Application;
+import com.jminiapp.persistence.DataRepository;
+import com.jminiapp.persistence.JsonDataRepository;
 
 import java.util.Scanner;
 
 public class WeatherApp extends Application {
 
-    private DataRepository<WeatherModel> repository;
+    private DataRepository<WeatherData> repository;
     private WeatherService service;
 
     @Override
@@ -16,7 +16,7 @@ public class WeatherApp extends Application {
         this.service = new WeatherService();
         this.repository = new JsonDataRepository<>(
                 "Weather.json",
-                WeatherModel.class
+                WeatherData.class
         );
 
         System.out.println("Weather App initialized.");
@@ -33,7 +33,7 @@ public class WeatherApp extends Application {
 
         System.out.println("Fetching weather data...");
 
-        WeatherModel data = service.fetchWeather(city);
+        WeatherData data = service.fetchWeather(city);
 
         if (data != null) {
             repository.save(data);

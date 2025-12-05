@@ -1,6 +1,6 @@
-package com.example.weather;
+package com.jminiapp.examples.weather;
 
-public class WeatherModel {
+public class WeatherData {
 
     private String lastCity;
     private double lastTemperature;

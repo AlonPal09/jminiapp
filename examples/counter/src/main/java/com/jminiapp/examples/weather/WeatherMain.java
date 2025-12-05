@@ -1,12 +1,12 @@
-package examples.weatherapp;
+package com.jminiapp.examples.weather;
 
-import dev.jminiapp.core.JMiniAppRunner;
+import com.jminiapp.core.JMiniAppRunner;
 
 public class WeatherMain {
     public static void main(String[] args) {
         JMiniAppRunner
             .forApp(WeatherApp.class)
-            .withState(WeatherModel.class)
+            .withState(WeatherData.class)
             .run(args);
     }
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "cityName": "Mérida",
+    "lastCity": "Mérida",
+    "country": "MX",
+    "temperature": 31.12,
+    "lastTemperature": 31.12,
+    "feelsLike": 34.6,
+    "humidity": 58,
+    "windSpeed": 1.34,
+    "description": "few clouds",
+    "lastDescription": "few clouds",
+    "icon": "02d",
+    "timestamp": 1764975684136
+  }
+]
